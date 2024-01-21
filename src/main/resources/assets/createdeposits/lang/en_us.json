@@ -1,0 +1,16 @@
+{
+  "creativetab.createdeposits_tab": "Create Deposits",
+
+  "item.createdeposits.iron_fertilizer_bucket": "Iron Fertilizer Bucket",
+
+  "block.createdeposits.surface_ore_generator": "Surface Ore Generator",
+  "block.createdeposits.surface_ore_stone": "Surface Ore Stone",
+
+  "block.createdeposits.coal_surface_ore": "Coal Surface Ore",
+  "block.createdeposits.copper_surface_ore": "Copper Surface Ore",
+  "block.createdeposits.gold_surface_ore": "Gold Surface Ore",
+  "block.createdeposits.redstone_surface_ore": "Redstone Surface Ore",
+  "block.createdeposits.zinc_surface_ore": "Zinc Surface Ore",
+  "block.createdeposits.iron_surface_ore": "Iron Surface Ore",
+  "block.createdeposits.andesite_surface_ore": "Andesite Surface Ore"
+}

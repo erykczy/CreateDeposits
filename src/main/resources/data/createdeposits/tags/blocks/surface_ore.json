@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "createdeposits:coal_surface_ore",
+    "createdeposits:copper_surface_ore",
+    "createdeposits:gold_surface_ore",
+    "createdeposits:redstone_surface_ore",
+    "createdeposits:zinc_surface_ore",
+    "createdeposits:iron_surface_ore",
+    "createdeposits:andesite_surface_ore"
+  ]
+}

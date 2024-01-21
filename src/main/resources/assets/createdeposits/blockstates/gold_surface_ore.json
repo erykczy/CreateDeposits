@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createdeposits:block/gold_surface_ore"
+    }
+  }
+}

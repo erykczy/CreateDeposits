@@ -1,0 +1,7 @@
+{
+	"parent": "createdeposits:block/surface_ore",
+	"textures": {
+		"0": "createdeposits:block/andesite_surface_ore",
+		"particle": "createdeposits:block/andesite_surface_ore"
+	}
+}

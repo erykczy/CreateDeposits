@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createdeposits:block/zinc_surface_ore"
+    }
+  }
+}

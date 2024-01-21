@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createdeposits:block/copper_surface_ore"
+    }
+  }
+}
