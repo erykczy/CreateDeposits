@@ -21,7 +21,13 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.SURFACE_ORE_GENERATOR.get());
                         pOutput.accept(ModBlocks.SURFACE_ORE_STONE.get());
+                        pOutput.accept(ModFluids.ANDESITE_FERTILIZER.bucket.get());
+                        pOutput.accept(ModFluids.COAL_FERTILIZER.bucket.get());
+                        pOutput.accept(ModFluids.COPPER_FERTILIZER.bucket.get());
+                        pOutput.accept(ModFluids.GOLD_FERTILIZER.bucket.get());
                         pOutput.accept(ModFluids.IRON_FERTILIZER.bucket.get());
+                        pOutput.accept(ModFluids.REDSTONE_FERTILIZER.bucket.get());
+                        pOutput.accept(ModFluids.ZINC_FERTILIZER.bucket.get());
                     })
                     .build());
 

@@ -1,7 +1,13 @@
 {
   "creativetab.createdeposits_tab": "Create Deposits",
 
+  "item.createdeposits.andesite_fertilizer_bucket": "Andesite Fertilizer Bucket",
+  "item.createdeposits.coal_fertilizer_bucket": "Coal Fertilizer Bucket",
+  "item.createdeposits.copper_fertilizer_bucket": "Copper Fertilizer Bucket",
+  "item.createdeposits.gold_fertilizer_bucket": "Gold Fertilizer Bucket",
   "item.createdeposits.iron_fertilizer_bucket": "Iron Fertilizer Bucket",
+  "item.createdeposits.redstone_fertilizer_bucket": "Redstone Fertilizer Bucket",
+  "item.createdeposits.zinc_fertilizer_bucket": "Zinc Fertilizer Bucket",
 
   "block.createdeposits.surface_ore_generator": "Surface Ore Generator",
   "block.createdeposits.surface_ore_stone": "Surface Ore Stone",

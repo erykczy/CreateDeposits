@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "particles": "createdeposits:block/fluid/still/coal_fertilizer"
+  }
+}
