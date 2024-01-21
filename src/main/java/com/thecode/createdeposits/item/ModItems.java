@@ -13,8 +13,6 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CreateDeposits.MODID);
 
-    public static final RegistryObject<Item> IRON_FERTILIZER_BUCKET = ITEMS.register("iron_fertilizer_bucket", () -> new BucketItem(ModFluids.IRON_FERTILIZER.Source, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

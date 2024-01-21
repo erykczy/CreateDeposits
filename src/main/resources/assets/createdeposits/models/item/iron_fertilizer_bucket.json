@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "createdeposits:item/iron_fertilizer_bucket"
+    "layer0": "createdeposits:item/bucket/iron_fertilizer_bucket"
   }
 }

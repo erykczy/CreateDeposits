@@ -74,8 +74,7 @@ public class CreateDeposits
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.IRON_FERTILIZER.Source.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.IRON_FERTILIZER.Flowing.get(), RenderType.translucent());
+
         }
     }
 }

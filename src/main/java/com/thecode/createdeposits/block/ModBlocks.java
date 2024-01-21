@@ -32,8 +32,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> SURFACE_ORE_STONE = registerBlockAndItem("surface_ore_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> SURFACE_ORE_GENERATOR = registerBlockAndItem("surface_ore_generator", SurfaceOreGeneratorBlock::new);
 
-    public static final RegistryObject<LiquidBlock> IRON_FERTILIZER_BLOCK = BLOCKS.register("iron_fertilizer", () -> new LiquidBlock(ModFluids.IRON_FERTILIZER.Source, BlockBehaviour.Properties.copy(Blocks.WATER)));
-
     public static ArrayList<RegistryObject<Block>> SURFACE_ORES = new ArrayList<>() {{
         add(COAL_SURFACE_ORE);
         add(COPPER_SURFACE_ORE);

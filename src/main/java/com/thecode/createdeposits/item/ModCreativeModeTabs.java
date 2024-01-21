@@ -2,6 +2,7 @@ package com.thecode.createdeposits.item;
 
 import com.thecode.createdeposits.CreateDeposits;
 import com.thecode.createdeposits.block.ModBlocks;
+import com.thecode.createdeposits.fluid.ModFluids;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,7 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.SURFACE_ORE_GENERATOR.get());
                         pOutput.accept(ModBlocks.SURFACE_ORE_STONE.get());
-                        pOutput.accept(ModItems.IRON_FERTILIZER_BUCKET.get());
+                        pOutput.accept(ModFluids.IRON_FERTILIZER.bucket.get());
                     })
                     .build());
 
