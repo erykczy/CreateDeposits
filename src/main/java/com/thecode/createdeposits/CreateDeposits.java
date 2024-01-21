@@ -35,13 +35,13 @@ public class CreateDeposits
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModBlocks.Register(modEventBus);
-        ModBlockEntities.Register(modEventBus);
-        ModItems.Register(modEventBus);
-        ModCreativeModeTabs.Register(modEventBus);
-        ModFeatures.RegisterFeatures(modEventBus);
-        ModFluids.Register(modEventBus);
-        ModFluidTypes.Register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+        ModFeatures.registerFeatures(modEventBus);
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -74,8 +74,8 @@ public class CreateDeposits
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_IRON_FERTILIZER.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_IRON_FERTILIZER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.IRON_FERTILIZER.Source.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.IRON_FERTILIZER.Flowing.get(), RenderType.translucent());
         }
     }
 }

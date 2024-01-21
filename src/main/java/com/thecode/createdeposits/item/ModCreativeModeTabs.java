@@ -20,10 +20,11 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.SURFACE_ORE_GENERATOR.get());
                         pOutput.accept(ModBlocks.SURFACE_ORE_STONE.get());
+                        pOutput.accept(ModItems.IRON_FERTILIZER_BUCKET.get());
                     })
                     .build());
 
-    public static void Register(IEventBus modEventBus) {
+    public static void register(IEventBus modEventBus) {
         CREATIVE_MODE_TAB.register(modEventBus);
     }
 }

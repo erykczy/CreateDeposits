@@ -35,7 +35,7 @@ public class SurfaceOreGeneratorBlock extends BaseEntityBlock {
         if(pLevel.isClientSide()) return;
         var blockEntity = (SurfaceOreGeneratorBlockEntity)pLevel.getBlockEntity(pPos);
         if(!pLevel.getBlockState(pPos.above()).is(blockEntity.OreBlock)) {
-            blockEntity.SpawnOre();
+            blockEntity.spawnOre();
         }
     }
 
@@ -51,13 +51,13 @@ public class SurfaceOreGeneratorBlock extends BaseEntityBlock {
     @Override
     public void onPlace(BlockState pState, Level pLevel, BlockPos pPos, BlockState pOldState, boolean pMovedByPiston) {
         var blockEntity = (SurfaceOreGeneratorBlockEntity)pLevel.getBlockEntity(pPos);
-        blockEntity.SpawnOre();
+        blockEntity.spawnOre();
     }
 
     @Override
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
         var blockEntity = (SurfaceOreGeneratorBlockEntity)pLevel.getBlockEntity(pPos);
-        blockEntity.RemoveOre();
+        blockEntity.removeOre();
         super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
     }
 }

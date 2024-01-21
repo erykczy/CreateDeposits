@@ -21,7 +21,7 @@ public class ModFeatures {
         return FEATURES.register(name, featureSupplier);
     }
 
-    public static void RegisterFeatures(IEventBus eventBus) {
+    public static void registerFeatures(IEventBus eventBus) {
         FEATURES.register(eventBus);
     }
 

@@ -2,7 +2,6 @@ package com.thecode.createdeposits.block.entity;
 
 import com.thecode.createdeposits.CreateDeposits;
 import com.thecode.createdeposits.block.ModBlocks;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,7 +15,7 @@ public class ModBlockEntities {
             ModBlocks.SURFACE_ORE_GENERATOR.get()
     ).build(null));
 
-    public static void Register(IEventBus eventBus) {
+    public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
 }

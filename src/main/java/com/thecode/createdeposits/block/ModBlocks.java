@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -33,7 +32,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SURFACE_ORE_STONE = registerBlockAndItem("surface_ore_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> SURFACE_ORE_GENERATOR = registerBlockAndItem("surface_ore_generator", SurfaceOreGeneratorBlock::new);
 
-    public static final RegistryObject<LiquidBlock> IRON_FERTILIZER_BLOCK = BLOCKS.register("iron_fertilizer", () -> new LiquidBlock(ModFluids.SOURCE_IRON_FERTILIZER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> IRON_FERTILIZER_BLOCK = BLOCKS.register("iron_fertilizer", () -> new LiquidBlock(ModFluids.IRON_FERTILIZER.Source, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     public static ArrayList<RegistryObject<Block>> SURFACE_ORES = new ArrayList<>() {{
         add(COAL_SURFACE_ORE);
@@ -55,7 +54,7 @@ public class ModBlocks {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
-    public static void Register(IEventBus eventBus) {
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
 

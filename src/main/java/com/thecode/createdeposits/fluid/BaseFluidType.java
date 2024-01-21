@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.minecraftforge.fluids.FluidType;
+import net.minecraftforge.fluids.ForgeFlowingFluid;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector3f;
 
@@ -15,15 +16,20 @@ import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
 public class BaseFluidType extends FluidType {
-    private final ResourceLocation stillTexture;
-    private final ResourceLocation flowingTexture;
-    private final ResourceLocation overlayTexture;
-    private final int tintColor;
-    private final Vector3f fogColor;
+    public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");
+    public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("block/water_flow");
+
+    public final Properties properties;
+    public final ResourceLocation stillTexture;
+    public final ResourceLocation flowingTexture;
+    public final ResourceLocation overlayTexture;
+    public final int tintColor;
+    public final Vector3f fogColor;
 
     public BaseFluidType(final ResourceLocation stillTexture, final ResourceLocation flowingTexture, final ResourceLocation overlayTexture,
                          final int tintColor, final Vector3f fogColor, final Properties properties) {
         super(properties);
+        this.properties = properties;
         this.stillTexture = stillTexture;
         this.flowingTexture = flowingTexture;
         this.overlayTexture = overlayTexture;

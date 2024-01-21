@@ -1,6 +1,5 @@
 package com.thecode.createdeposits.block.entity;
 
-import com.thecode.createdeposits.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
@@ -36,11 +35,11 @@ public class SurfaceOreGeneratorBlockEntity extends BlockEntity {
         }
     }
 
-    public void SpawnOre() {
+    public void spawnOre() {
         getLevel().setBlockAndUpdate(getBlockPos().above(), OreBlock.defaultBlockState());
     }
 
-    public void RemoveOre() {
+    public void removeOre() {
         getLevel().setBlockAndUpdate(getBlockPos().above(), Blocks.AIR.defaultBlockState());
     }
 }

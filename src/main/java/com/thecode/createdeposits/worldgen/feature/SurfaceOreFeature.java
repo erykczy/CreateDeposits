@@ -42,16 +42,16 @@ public class SurfaceOreFeature extends Feature<NoneFeatureConfiguration> {
 
                 if(rng <= oreChance) {
                     // ore
-                    var placePos = GetOrePlacePos(pContext, origin.getX() + deltaX, origin.getY(), origin.getZ() + deltaZ);
+                    var placePos = getOrePlacePos(pContext, origin.getX() + deltaX, origin.getY(), origin.getZ() + deltaZ);
                     if(placePos != null)
-                        PlaceOreGenerator(pContext, ore, placePos.below());
+                        placeOreGenerator(pContext, ore, placePos.below());
                 }
                 else {
                     // stone
                     var stoneChance = Math.pow(1 - (distance / radius), 0.3f);
                     rng = random.nextFloat();
                     if(rng <= stoneChance) {
-                        var placePos = GetOrePlacePos(pContext, origin.getX() + deltaX, origin.getY(), origin.getZ() + deltaZ);
+                        var placePos = getOrePlacePos(pContext, origin.getX() + deltaX, origin.getY(), origin.getZ() + deltaZ);
                         if(placePos != null)
                             setBlock(pContext.level(), placePos.below(), ModBlocks.SURFACE_ORE_STONE.get().defaultBlockState());
                     }
@@ -63,7 +63,7 @@ public class SurfaceOreFeature extends Feature<NoneFeatureConfiguration> {
     }
 
     @Nullable
-    private BlockPos GetOrePlacePos(FeaturePlaceContext<NoneFeatureConfiguration> pContext, int x, int y, int z) {
+    private BlockPos getOrePlacePos(FeaturePlaceContext<NoneFeatureConfiguration> pContext, int x, int y, int z) {
         var level = pContext.level();
 
         BlockPos pos = null;
@@ -84,7 +84,7 @@ public class SurfaceOreFeature extends Feature<NoneFeatureConfiguration> {
         return pos;
     }
 
-    private void PlaceOreGenerator(FeaturePlaceContext<NoneFeatureConfiguration> pContext, Block ore, BlockPos pos) {
+    private void placeOreGenerator(FeaturePlaceContext<NoneFeatureConfiguration> pContext, Block ore, BlockPos pos) {
         var level = pContext.level();
 
         setBlock(level, pos, ModBlocks.SURFACE_ORE_GENERATOR.get().defaultBlockState());
