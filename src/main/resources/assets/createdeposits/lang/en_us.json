@@ -9,15 +9,31 @@
   "item.createdeposits.redstone_fertilizer_bucket": "Redstone Fertilizer Bucket",
   "item.createdeposits.zinc_fertilizer_bucket": "Zinc Fertilizer Bucket",
 
+  "fluid_type.createdeposits.andesite_fertilizer": "Andesite Fertilizer",
+  "fluid_type.createdeposits.coal_fertilizer": "Coal Fertilizer",
+  "fluid_type.createdeposits.copper_fertilizer": "Copper Fertilizer",
+  "fluid_type.createdeposits.gold_fertilizer": "Gold Fertilizer",
+  "fluid_type.createdeposits.redstone_fertilizer": "Redstone Fertilizer",
+  "fluid_type.createdeposits.zinc_fertilizer": "Zinc Fertilizer",
+  "fluid_type.createdeposits.iron_fertilizer": "Iron Fertilizer",
+
   "block.createdeposits.surface_ore_generator": "Surface Ore Generator",
   "block.createdeposits.fertilizer_generator": "Fertilizer Generator",
   "block.createdeposits.surface_ore_stone": "Surface Ore Stone",
 
+  "block.createdeposits.andesite_fertilizer": "Andesite Fertilizer",
+  "block.createdeposits.coal_fertilizer": "Coal Fertilizer",
+  "block.createdeposits.copper_fertilizer": "Copper Fertilizer",
+  "block.createdeposits.gold_fertilizer": "Gold Fertilizer",
+  "block.createdeposits.redstone_fertilizer": "Redstone Fertilizer",
+  "block.createdeposits.zinc_fertilizer": "Zinc Fertilizer",
+  "block.createdeposits.iron_fertilizer": "Iron Fertilizer",
+
+  "block.createdeposits.andesite_surface_ore": "Andesite Surface Ore",
   "block.createdeposits.coal_surface_ore": "Coal Surface Ore",
   "block.createdeposits.copper_surface_ore": "Copper Surface Ore",
   "block.createdeposits.gold_surface_ore": "Gold Surface Ore",
   "block.createdeposits.redstone_surface_ore": "Redstone Surface Ore",
   "block.createdeposits.zinc_surface_ore": "Zinc Surface Ore",
-  "block.createdeposits.iron_surface_ore": "Iron Surface Ore",
-  "block.createdeposits.andesite_surface_ore": "Andesite Surface Ore"
+  "block.createdeposits.iron_surface_ore": "Iron Surface Ore"
 }
