@@ -11,7 +11,7 @@ public class Fertilizer extends FluidRegistryContainer {
     public Fertilizer(String name, int fogRed, int fogGreen, int fogBlue) {
         super(
             name,
-            FluidType.Properties.create().canConvertToSource(false).motionScale(0.02d).density(10000).viscosity(50000).canSwim(false).fallDistanceModifier(0f),
+            FluidType.Properties.create().canConvertToSource(false).motionScale(0.02d).density(100000).viscosity(100000).canSwim(false).fallDistanceModifier(0f),
             () -> FluidRegistryContainer.createExtension(
                     new ClientExtensions(
                             new ResourceLocation(CreateDeposits.MODID, "block/fluid/still/"+name),

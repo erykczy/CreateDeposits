@@ -4,7 +4,6 @@ import com.thecode.createdeposits.CreateDeposits;
 import com.thecode.createdeposits.block.ModBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidType;
