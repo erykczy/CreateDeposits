@@ -3,13 +3,10 @@ package com.thecode.createdeposits;
 import com.mojang.logging.LogUtils;
 import com.thecode.createdeposits.block.ModBlocks;
 import com.thecode.createdeposits.block.entity.ModBlockEntities;
-import com.thecode.createdeposits.fluid.ModFluidTypes;
 import com.thecode.createdeposits.fluid.ModFluids;
 import com.thecode.createdeposits.item.ModCreativeModeTabs;
 import com.thecode.createdeposits.item.ModItems;
 import com.thecode.createdeposits.worldgen.feature.ModFeatures;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -50,7 +47,6 @@ public class CreateDeposits
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModFeatures.registerFeatures(modEventBus);
-        ModFluidTypes.register(modEventBus);
         ModFluids.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);

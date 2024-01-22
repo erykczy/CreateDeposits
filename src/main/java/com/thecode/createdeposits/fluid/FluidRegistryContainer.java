@@ -44,7 +44,7 @@ public class FluidRegistryContainer {
                                   Supplier<IClientFluidTypeExtensions> clientExtensions, @Nullable AdditionalProperties additionalProperties,
                                   BlockBehaviour.Properties blockProperties, Item.Properties itemProperties) {
         this.typeProperties = typeProperties;
-        this.type = ModFluidTypes.FLUID_TYPES.register(name, () -> new FluidType(this.typeProperties) {
+        this.type = ModFluids.FLUID_TYPES.register(name, () -> new FluidType(this.typeProperties) {
             @Override
             public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
                 consumer.accept(clientExtensions.get());

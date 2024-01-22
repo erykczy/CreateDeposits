@@ -5,8 +5,10 @@ import com.thecode.createdeposits.block.ModBlocks;
 import com.thecode.createdeposits.block.entity.SurfaceOreGeneratorBlockEntity;
 import com.thecode.createdeposits.tag.ModTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
@@ -14,7 +16,6 @@ import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConf
 import javax.annotation.Nullable;
 
 public class SurfaceOreFeature extends Feature<NoneFeatureConfiguration> {
-    private static final float Fill = 1f;
     private static final int MinRadius = 2;
     private static final int MaxRadius = 6;
     private static final int MaxYDelta = 5;
@@ -87,9 +88,14 @@ public class SurfaceOreFeature extends Feature<NoneFeatureConfiguration> {
     private void placeOreGenerator(FeaturePlaceContext<NoneFeatureConfiguration> pContext, Block ore, BlockPos pos) {
         var level = pContext.level();
 
-        setBlock(level, pos, ModBlocks.SURFACE_ORE_GENERATOR.get().defaultBlockState());
+        if(!trySetBlock(level, pos, ModBlocks.SURFACE_ORE_GENERATOR.get().defaultBlockState())) return;
         var generatorEntity = (SurfaceOreGeneratorBlockEntity)level.getBlockEntity(pos);
-        generatorEntity.OreBlock = ore;
-        setBlock(level, pos.above(), ore.defaultBlockState());
+        generatorEntity.setOre(ore);
+        trySetBlock(level, pos.above(), ore.defaultBlockState());
+    }
+
+    private boolean trySetBlock(WorldGenLevel level, BlockPos pos, BlockState blockState) {
+        setBlock(level, pos, blockState);
+        return level.getBlockState(pos) == blockState;
     }
 }
