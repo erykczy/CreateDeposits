@@ -41,14 +41,6 @@ public class SurfaceOreGeneratorBlock extends BaseEntityBlock {
         return pLevel.isClientSide() ? null : (level, pos, state, blockEntity) -> ((SurfaceOreGeneratorBlockEntity)blockEntity).tick();
     }
 
-    public void neighborChanged(BlockState pState, Level pLevel, BlockPos pPos, Block pNeighborBlock, BlockPos pNeighborPos, boolean pMovedByPiston) {
-        if(pLevel.isClientSide()) return;
-        var blockEntity = (SurfaceOreGeneratorBlockEntity)pLevel.getBlockEntity(pPos);
-        if(pLevel.getBlockState(pPos.above()).isAir()) {
-            blockEntity.trySpawnOre();
-        }
-    }
-
     @Override
     public float getDestroyProgress(BlockState pState, Player pPlayer, BlockGetter pLevel, BlockPos pPos) {
         return CanPlayerDestroy(pPlayer) ? 10 : 0;
@@ -56,21 +48,5 @@ public class SurfaceOreGeneratorBlock extends BaseEntityBlock {
 
     private boolean CanPlayerDestroy(Player player) {
         return player.getInventory().getSelected().getEnchantmentLevel(Enchantments.SILK_TOUCH) != 0;
-    }
-
-    @Override
-    public void onPlace(BlockState pState, Level pLevel, BlockPos pPos, BlockState pOldState, boolean pMovedByPiston) {
-        if(pLevel.isClientSide()) return;
-        var blockEntity = (SurfaceOreGeneratorBlockEntity)pLevel.getBlockEntity(pPos);
-        blockEntity.trySpawnOre();
-    }
-
-    @Override
-    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pMovedByPiston) {
-        if(!pLevel.isClientSide()) {
-            var blockEntity = (SurfaceOreGeneratorBlockEntity)pLevel.getBlockEntity(pPos);
-            blockEntity.tryRemoveOre();
-        }
-        super.onRemove(pState, pLevel, pPos, pNewState, pMovedByPiston);
     }
 }
