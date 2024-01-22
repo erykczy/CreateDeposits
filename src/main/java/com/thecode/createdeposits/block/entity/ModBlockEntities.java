@@ -15,6 +15,10 @@ public class ModBlockEntities {
             ModBlocks.SURFACE_ORE_GENERATOR.get()
     ).build(null));
 
+    public static final RegistryObject<BlockEntityType<FertilizerGeneratorBlockEntity>> FERTILIZER_GENERATOR_BLOCK_ENTITY = BLOCK_ENTITIES.register("fertilizer_generator_block_entity", () -> BlockEntityType.Builder.of(FertilizerGeneratorBlockEntity::new,
+            ModBlocks.FERTILIZER_GENERATOR.get()
+    ).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

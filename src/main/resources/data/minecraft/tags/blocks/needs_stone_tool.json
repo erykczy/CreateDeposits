@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#createdeposits:surface_ore"
+    "createdeposits:surface_ore_stone"
   ]
 }

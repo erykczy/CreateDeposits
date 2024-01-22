@@ -1,6 +1,5 @@
 {
-  "parent": "minecraft:block/cube_all",
   "textures": {
-    "particles": "createdeposits:block/fluid/still/zinc_fertilizer"
+    "particle": "createdeposits:block/fluid/still/zinc_fertilizer"
   }
 }

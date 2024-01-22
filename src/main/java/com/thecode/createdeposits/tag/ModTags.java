@@ -7,7 +7,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
 public class ModTags {
-    public static final TagKey<Block> ORE_SPAWNABLE = tag("ore_spawnable");
+    public static final TagKey<Block> ORE_PLACEABLE = tag("ore_placeable");
     public static final TagKey<Block> SURFACE_ORE = tag("surface_ore");
 
     private static TagKey<Block> tag(String name) {

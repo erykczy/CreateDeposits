@@ -1,6 +1,9 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "createdeposits:surface_ore",
+  "features": [
+    "createdeposits:fertilizer_geyser",
+    "createdeposits:surface_ore"
+  ],
   "step": "raw_generation"
 }

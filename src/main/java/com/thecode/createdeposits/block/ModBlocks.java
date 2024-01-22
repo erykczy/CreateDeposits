@@ -29,6 +29,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SURFACE_ORE_STONE = registerBlockAndItem("surface_ore_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> SURFACE_ORE_GENERATOR = registerBlockAndItem("surface_ore_generator", SurfaceOreGeneratorBlock::new);
+    public static final RegistryObject<Block> FERTILIZER_GENERATOR = registerBlockAndItem("fertilizer_generator", FertilizerGeneratorBlock::new);
 
     public static ArrayList<RegistryObject<Block>> SURFACE_ORES = new ArrayList<>() {{
         add(COAL_SURFACE_ORE);
@@ -54,7 +55,7 @@ public class ModBlocks {
         BLOCKS.register(eventBus);
     }
 
-    public static Block GetRandomSurfaceOre(RandomSource random) {
-        return SURFACE_ORES.get(random.nextInt(0, SURFACE_ORES.size())).get();
+    public static RegistryObject<Block> GetRandomSurfaceOre(RandomSource random) {
+        return SURFACE_ORES.get(random.nextInt(0, SURFACE_ORES.size()));
     }
 }

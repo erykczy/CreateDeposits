@@ -51,7 +51,7 @@ public class FluidRegistryContainer {
             }
         });
 
-        this.source = ModFluids.FLUIDS.register(name + "_source", () -> new ForgeFlowingFluid.Source(this.properties));
+        this.source = ModFluids.FLUIDS.register(name, () -> new ForgeFlowingFluid.Source(this.properties));
         this.flowing = ModFluids.FLUIDS.register(name + "_flowing",
                 () -> new ForgeFlowingFluid.Flowing(this.properties));
 

@@ -1,6 +1,5 @@
 {
-  "parent": "minecraft:block/cube_all",
   "textures": {
-    "particles": "createdeposits:block/fluid/still/andesite_fertilizer"
+    "particle": "createdeposits:block/fluid/still/andesite_fertilizer"
   }
 }

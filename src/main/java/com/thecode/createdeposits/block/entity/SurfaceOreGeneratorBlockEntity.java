@@ -19,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class SurfaceOreGeneratorBlockEntity extends BlockEntity {
+public class SurfaceOreGeneratorBlockEntity extends BlockEntity implements ITickingBlockEntity {
     public static final int CAPACITY = 1000;
     public static final int ORE_COST = 1000;
     public FluidTank fluidTank;
@@ -83,6 +83,7 @@ public class SurfaceOreGeneratorBlockEntity extends BlockEntity {
             fluidTank.setValidator((stack) -> stack.getFluid().isSame(fertilizer.source.get()));
     }
 
+    @Override
     public void tick() {
         if(getLevel() == null || getLevel().isClientSide()) return;
 

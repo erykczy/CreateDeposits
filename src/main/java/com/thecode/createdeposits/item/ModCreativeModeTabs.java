@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.COAL))
                     .title(Component.translatable("creativetab.createdeposits_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModBlocks.FERTILIZER_GENERATOR.get());
                         pOutput.accept(ModBlocks.SURFACE_ORE_GENERATOR.get());
                         pOutput.accept(ModBlocks.SURFACE_ORE_STONE.get());
                         pOutput.accept(ModFluids.ANDESITE_FERTILIZER.bucket.get());

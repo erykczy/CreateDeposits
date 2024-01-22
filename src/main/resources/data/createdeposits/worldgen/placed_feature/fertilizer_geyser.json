@@ -1,5 +1,5 @@
 {
-  "feature": "createdeposits:surface_ore",
+  "feature": "createdeposits:fertilizer_geyser",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,7 +7,7 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "weight": 29,
+            "weight": 39,
             "data": 0
           },
           {
