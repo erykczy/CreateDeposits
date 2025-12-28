@@ -66,7 +66,7 @@ public class SurfaceOreGeneratorBlockEntity extends BlockEntity implements ITick
         if(cap == ForgeCapabilities.FLUID_HANDLER)
             return fluidCapability.cast();
 
-        return super.getCapability(cap);
+        return super.getCapability(cap, side);
     }
 
     @Override
